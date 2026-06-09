@@ -2,7 +2,6 @@
 
 > Dashboard estilo **cyberpunk/neon** para monitoramento de servidores em tempo real, construído com o plugin [Grafana HTML Graphics](https://github.com/gapitio/gapit-htmlgraphics-panel).
 
-<img width="900" height="450" alt="Demomapasvg" src="https://github.com/thyagohyvo/Table-server-monitor-grafana/blob/main/Neon%20Server%20Monitor%20Grafana%20HTML%20Graphics%20Panel.gif" />
 ---
 
 ## ✦ Visão Geral
@@ -22,8 +21,7 @@ Painel interativo que exibe métricas de infraestrutura (CPU, Memória, Disco e 
 
 ## ✦ Preview
 
-![Neon Server Monitor](preview.png)
-
+<img width="900" height="450" alt="Demomapasvg" src="https://github.com/thyagohyvo/Table-server-monitor-grafana/blob/main/Neon%20Server%20Monitor%20Grafana%20HTML%20Graphics%20Panel.gif" />
 ---
 
 ## ✦ Estrutura do Repositório
