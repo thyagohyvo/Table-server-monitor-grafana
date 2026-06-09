@@ -1,15 +1,13 @@
-# Table-server-monitor-grafana
-# ⬡ Neon Server Monitor — Grafana HTML Graphics Panel
+# ⬡ Neon Server Monitor - Grafana HTML Graphics Panel
 
 > Dashboard estilo **cyberpunk/neon** para monitoramento de servidores em tempo real, construído com o plugin [Grafana HTML Graphics](https://github.com/gapitio/gapit-htmlgraphics-panel).
 
-![Preview](preview.png)
 
----
 
-## ✦ Visão Geral
 
-Painel interativo que exibe métricas de infraestrutura (CPU, Memória, Disco e Uptime) com visual neon, scanlines e animações de alerta — tudo dentro de um único panel do Grafana sem dependências externas de frontend.
+# ✦ Visão Geral
+
+Painel interativo que exibe métricas de infraestrutura (CPU, Memória, Disco e Uptime) com visual neon, scanlines e animações de alerta - tudo dentro de um único panel do Grafana sem dependências externas de frontend.
 
 **Funcionalidades:**
 - Status UP/DOWN com dot animado
@@ -54,7 +52,7 @@ Ou via `grafana.ini`:
 allow_loading_unsigned_plugins = gapit-htmlgraphics-panel
 ```
 
-### 2. Datasource — colunas esperadas
+### 2. Datasource - colunas esperadas
 
 O painel lê a **primeira série** (`data.series[0]`) e espera os seguintes campos:
 
@@ -105,10 +103,10 @@ const THRESHOLDS = {
 
 Clique em qualquer cabeçalho de coluna para ordenar:
 
-- **Servidor** — alfabético
-- **Status** — UP primeiro / DOWN primeiro
-- **CPU / Memória / Disco** — numérico crescente/decrescente
-- **Uptime** — numérico crescente/decrescente
+- **Servidor** - alfabético
+- **Status** - UP primeiro / DOWN primeiro
+- **CPU / Memória / Disco** - numérico crescente/decrescente
+- **Uptime** - numérico crescente/decrescente
 
 O estado de ordenação persiste durante a sessão via `window.__neon_state__`.
 
@@ -153,4 +151,4 @@ Fontes: [Orbitron](https://fonts.google.com/specimen/Orbitron) (títulos) + [Sha
 
 ## ✦ Licença
 
-MIT — use, modifique e distribua livremente.
+MIT - use, modifique e distribua livremente.
