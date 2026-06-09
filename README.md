@@ -290,4 +290,4 @@ Fontes: [Orbitron](https://fonts.google.com/specimen/Orbitron) (títulos) + [Sha
 
 ## ✦ Licença
 
-MIT - use, modifique e distribua livremente.
+MIT - sinta-se livre para usar, modificar e distribuir. Se este card te ajudou e você for compartilhar em alguma rede social, blog ou fórum, considere fazer uma referência a este repositório como base. Isso ajuda a comunidade a encontrar o projeto e contribui para que mais pessoas se beneficiem da solução. 🙌 🔗 github.com/thyagohyvo/grafana-sdwan-latency-card
