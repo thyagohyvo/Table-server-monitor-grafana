@@ -1,4 +1,4 @@
-# ⬡ Neon Server Monitor — Grafana HTML Graphics Panel
+# ⬡ Neon Server Monitor - Grafana HTML Graphics Panel
 
 > Dashboard estilo **cyberpunk/neon** para monitoramento de servidores em tempo real, construído com o plugin [Grafana HTML Graphics](https://github.com/gapitio/gapit-htmlgraphics-panel).
 
@@ -7,7 +7,7 @@
 
 ## ✦ Visão Geral
 
-Painel interativo que exibe métricas de infraestrutura (CPU, Memória, Disco e Uptime) com visual neon, scanlines e animações de alerta — tudo dentro de um único panel do Grafana sem dependências externas de frontend.
+Painel interativo que exibe métricas de infraestrutura (CPU, Memória, Disco e Uptime) com visual neon, scanlines e animações de alerta - tudo dentro de um único panel do Grafana sem dependências externas de frontend.
 
 **Funcionalidades:**
 - Status UP/DOWN com dot animado
@@ -52,7 +52,7 @@ Ou via `grafana.ini`:
 allow_loading_unsigned_plugins = gapit-htmlgraphics-panel
 ```
 
-### 2. Datasource — colunas esperadas
+### 2. Datasource - colunas esperadas
 
 O painel lê a **primeira série** (`data.series[0]`) e espera os seguintes campos:
 
@@ -171,7 +171,7 @@ A query é construída em duas camadas: o `FROM` principal seleciona os hosts, e
 | `history` | Histórico de métricas do tipo `float` (CPU, memória, disco) |
 | `history_uint` | Histórico de métricas do tipo `unsigned int` (status, uptime) |
 
-**JOINs — resolução dos `itemid`:**
+**JOINs - resolução dos `itemid`:**
 
 Cada `LEFT JOIN` na tabela `items` localiza o `itemid` de uma métrica específica para o host, filtrando pela `key_` do Zabbix:
 
@@ -185,7 +185,7 @@ Cada `LEFT JOIN` na tabela `items` localiza o `itemid` de uma métrica específi
 
 **Subqueries correlacionadas:**
 
-Para cada métrica, uma subquery busca o registro mais recente no histórico ordenando por `clock DESC` e limitando a 1 linha — equivalente a um `LAST()`. Isso garante que o painel sempre exiba o estado atual sem precisar de agregações por janela de tempo.
+Para cada métrica, uma subquery busca o registro mais recente no histórico ordenando por `clock DESC` e limitando a 1 linha - equivalente a um `LAST()`. Isso garante que o painel sempre exiba o estado atual sem precisar de agregações por janela de tempo.
 
 ```sql
 SELECT hv.value
@@ -206,7 +206,7 @@ WHERE g.name = 'GRUPO-DE-HOSTS'  -- filtra pelo grupo desejado no Zabbix
 
 **Por que `LEFT JOIN` e não `INNER JOIN`?**
 
-O `LEFT JOIN` garante que hosts sem uma métrica cadastrada (ex: item desabilitado ou ainda sem coleta) ainda apareçam na listagem — nesses casos o valor da coluna será `NULL`, exibido como `—` no painel.
+O `LEFT JOIN` garante que hosts sem uma métrica cadastrada (ex: item desabilitado ou ainda sem coleta) ainda apareçam na listagem - nesses casos o valor da coluna será `NULL`, exibido como `-` no painel.
 
 ### 3. Configurar o panel
 
@@ -244,10 +244,10 @@ const THRESHOLDS = {
 
 Clique em qualquer cabeçalho de coluna para ordenar:
 
-- **Servidor** — alfabético
-- **Status** — UP primeiro / DOWN primeiro
-- **CPU / Memória / Disco** — numérico crescente/decrescente
-- **Uptime** — numérico crescente/decrescente
+- **Servidor** - alfabético
+- **Status** - UP primeiro / DOWN primeiro
+- **CPU / Memória / Disco** - numérico crescente/decrescente
+- **Uptime** - numérico crescente/decrescente
 
 O estado de ordenação persiste durante a sessão via `window.__neon_state__`.
 
@@ -292,4 +292,4 @@ Fontes: [Orbitron](https://fonts.google.com/specimen/Orbitron) (títulos) + [Sha
 
 ## ✦ Licença
 
-MIT — use, modifique e distribua livremente.
+MIT - use, modifique e distribua livremente.
